@@ -1,0 +1,22 @@
+// 一些变量
+$primary: #3398ff;
+$success: #29cc7a;
+$danger: #ee6869;
+
+// 一些混合
+@mixin primary {
+    color: $primary;
+}
+@mixin success {
+    color: $success;
+}
+@mixin danger {
+    color: $danger;
+}
+
+// 一些循环
+@for $i from 12 through 30 {
+    .f#{$i} {
+        font-size: 1px * $i !important;
+    }
+}

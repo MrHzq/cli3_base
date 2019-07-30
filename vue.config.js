@@ -28,6 +28,14 @@ const cdn = {
     ]
 }
 
+// path依赖
+const path = require('path')
+
+// 查找文件方法
+const resolve = dir => {
+    return path.join(__dirname, dir)
+}
+
 module.exports = {
     productionSourceMap: false,
     chainWebpack: config => {
@@ -47,6 +55,11 @@ module.exports = {
             return args
         })
         // ============注入cdn start============
+
+        // 别名配置
+        config.resolve.alias
+            .set('assets', resolve('src/assets'))
+            .set('components', resolve('src/components'))
     },
     configureWebpack: config => {
         // 用cdn方式引入，则构建时要忽略相关资源
@@ -119,6 +132,24 @@ module.exports = {
                         }
                     }
                 }
+            }
+        }
+    },
+    // SASS配置
+    css: {
+        loaderOptions: {
+            sass: {
+                data: '@import "@/style/app.scss";'
+            }
+        }
+    },
+    devServer: {
+        // 代理
+        proxy: {
+            '/api': {
+                target: 'http://userweb.linshibin.com',
+                ws: true,
+                changeOrigin: true
             }
         }
     }
