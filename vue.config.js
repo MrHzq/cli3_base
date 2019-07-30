@@ -8,7 +8,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProduction = process.env.NODE_ENV !== 'development'
 
 // 本地环境是否需要使用cdn
-const devNeedCdn = true
+const devNeedCdn = false
 
 // cdn链接
 const cdn = {
