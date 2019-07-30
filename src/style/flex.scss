@@ -1,0 +1,70 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-01-12 11:09:34
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-25 13:51:25
+ * @文件说明: flex布局样式 TODO:必须
+ */
+@mixin flex($jc: center, $ai: center, $fd: row, $fw: wrap) {
+    display: flex;
+    flex-wrap: $fw;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
+// flex：x轴：左对齐；y轴：居中
+@mixin flex-s($ai: center, $fd: row) {
+    @include flex(flex-start, $ai, $fd);
+}
+.flex-s {
+    @include flex-s;
+}
+.flex-s-s {
+    @include flex-s(flex-start);
+}
+.flex-s-e {
+    @include flex-s(flex-end);
+}
+.flex-s-b {
+    @include flex-s(baseline);
+}
+
+// flex：x轴：右对齐；y轴：居中
+@mixin flex-e($ai: center, $fd: row) {
+    @include flex(flex-end, $ai, $fd);
+}
+.flex-e {
+    @include flex-e;
+}
+
+// flex：x轴：居中对齐；y轴：居中
+@mixin flex-c($ai: center, $fd: row) {
+    @include flex(center, $ai, $fd);
+}
+.flex-c {
+    @include flex-c;
+}
+
+// flex：x轴：两端对齐；y轴：居中
+@mixin flex-a($ai: center, $fd: row) {
+    @include flex(space-around, $ai, $fd);
+}
+.flex-a {
+    @include flex-a;
+}
+
+// flex：x轴：每个项目两侧的间隔相等；y轴：居中
+@mixin flex-b($ai: center, $fd: row) {
+    @include flex(space-between, $ai, $fd);
+}
+.flex-b {
+    @include flex-b;
+}
+.flex-b-s {
+    @include flex-s(flex-start);
+}
+
+.flex {
+    flex: 1;
+}

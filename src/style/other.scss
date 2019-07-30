@@ -1,0 +1,86 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-07-25 13:52:56
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-25 13:54:05
+ * @文件说明: 常用样式 TODO:必须
+ */
+// 块级
+.block {
+    display: block !important;
+}
+// 行内
+.inline {
+    display: inline-block !important;
+}
+// 隐藏
+.dn {
+    display: none !important;
+}
+
+// 左对齐
+.align-l {
+    text-align: left;
+}
+// 居中对齐
+.align-c {
+    text-align: center;
+}
+// 右对齐
+.align-r {
+    text-align: right;
+}
+
+// 移入手型
+.cursor {
+    cursor: pointer !important;
+    user-select: none;
+}
+
+// 透明度1
+.op1 {
+    opacity: 1;
+}
+// 透明度0
+.op0 {
+    opacity: 0;
+}
+
+// 背景图片相关
+@mixin bgi(
+    $url: '~@/assets/logo.png',
+    $size: cover,
+    $p: center,
+    $r: no-repeat
+) {
+    background-image: url($url);
+    background-size: $size;
+    background-position: $p;
+    background-repeat: $r;
+}
+.bgi {
+    @include bgi;
+}
+
+// 单行超出隐藏
+@mixin ellipsis1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellipsis1 {
+    @include ellipsis1;
+}
+
+// 多行超出隐藏
+@mixin ellipsis2($clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: $clamp;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+}
+.ellipsis2 {
+    @include ellipsis2;
+}

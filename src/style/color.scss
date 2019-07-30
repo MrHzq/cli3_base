@@ -1,0 +1,64 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-06-27 16:48:48
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-24 15:40:57
+ * @文件说明: 颜色样式
+ */
+$f: #fff;
+$f2: #f2f2f2;
+$c3: #000;
+$c4a: #4a4a4a;
+$c6: #666;
+$c9: #999;
+$primary: #409eff;
+$success: #67c23a;
+$warn: #e6a23c;
+$danger: #e42111;
+// 背景颜色白色
+.bgf {
+    background-color: $f;
+}
+.f {
+    color: $f;
+}
+.f2 {
+    color: $f2;
+}
+.c3 {
+    color: $c3;
+}
+.c4a {
+    color: $c4a;
+}
+.c6 {
+    color: $c6;
+}
+.c9 {
+    color: $c9;
+}
+.primary {
+    color: $primary;
+}
+.success {
+    color: $success;
+}
+.warn {
+    color: $warn;
+}
+.danger {
+    color: $danger;
+}
+
+:export {
+    f: $f;
+    f2: $f2;
+    c3: $c3;
+    c4a: $c4a;
+    c6: $c6;
+    c9: $c9;
+    primary: $primary;
+    success: $success;
+    warn: $warn;
+    danger: $danger;
+}

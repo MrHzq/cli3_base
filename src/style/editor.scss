@@ -1,0 +1,68 @@
+.htmlWarp {
+    & /deep/ .html {
+        font-size: 16px;
+        color: $c6;
+        text-align: justify;
+        white-space: pre-wrap;
+        img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            margin: 16px 0;
+        }
+
+        h1 {
+            margin: 20px 0 12px;
+            color: $c3;
+            font-size: 20px;
+        }
+        h2 {
+            margin: 20px 0 12px;
+            color: $c3;
+            font-size: 18px;
+        }
+        p {
+            margin: 12px 0;
+            color: $c6;
+        }
+        ol,
+        ul {
+            color: $c3;
+            padding-left: 0;
+        }
+        ol {
+            list-style: decimal inside;
+        }
+        ul {
+            list-style: disc inside;
+        }
+        li {
+            margin: 5px 0;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+            height: 483px;
+            margin: 16px 0;
+        }
+        a {
+            color: $primary !important;
+            cursor: pointer !important;
+        }
+        .ql-align-center {
+            text-align: center;
+            img {
+                margin: 16px auto;
+            }
+        }
+        .ql-align-right {
+            text-align: right;
+            img {
+                margin: 16px auto;
+            }
+        }
+        .ql-align-justify {
+            text-align: justify;
+        }
+    }
+}

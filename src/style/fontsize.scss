@@ -1,0 +1,12 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-06-27 16:48:27
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-25 13:53:08
+ * @文件说明: 字体大小样式 TODO:必须
+ */
+@for $i from 12 through 40 {
+    .f#{$i} {
+        font-size: 1px * $i !important;
+    }
+}

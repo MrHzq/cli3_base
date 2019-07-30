@@ -4,10 +4,9 @@ import router from './router'
 import store from './store'
 import hzqAxios from 'hzq-axios'
 import hzqTool from 'hzq-tool'
-
 import './components/global'
 
-Vue.use(hzqTool)
+Vue.use(hzqTool, { router })
 
 Vue.config.productionTip = false
 

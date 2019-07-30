@@ -1,0 +1,15 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-06-27 17:06:08
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-06-27 17:06:08
+ * @文件说明: 圆角度数
+ */
+.bdr50 {
+    border-radius: 50% !important;
+}
+@for $i from 0 through 10 {
+    .bdr#{$i} {
+        border-radius: 1px * $i !important;
+    }
+}

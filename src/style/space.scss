@@ -1,0 +1,41 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-06-27 16:47:53
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-25 13:51:32
+ * @文件说明: mragin、padding 间距样式 TODO:必须
+ */
+
+@for $i from 0 through 40 {
+    .p#{$i} {
+        padding: 1px * $i !important;
+    }
+    .pt#{$i} {
+        padding-top: 1px * $i !important;
+    }
+    .pl#{$i} {
+        padding-left: 1px * $i !important;
+    }
+    .pb#{$i} {
+        padding-bottom: 1px * $i !important;
+    }
+    .pr#{$i} {
+        padding-right: 1px * $i !important;
+    }
+
+    .m#{$i} {
+        margin: 1px * $i !important;
+    }
+    .mt#{$i} {
+        margin-top: 1px * $i !important;
+    }
+    .ml#{$i} {
+        margin-left: 1px * $i !important;
+    }
+    .mb#{$i} {
+        margin-bottom: 1px * $i !important;
+    }
+    .mr#{$i} {
+        margin-right: 1px * $i !important;
+    }
+}

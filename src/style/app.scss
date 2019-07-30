@@ -1,22 +1,14 @@
-// 一些变量
-$primary: #3398ff;
-$success: #29cc7a;
-$danger: #ee6869;
-
-// 一些混合
-@mixin primary {
-    color: $primary;
-}
-@mixin success {
-    color: $success;
-}
-@mixin danger {
-    color: $danger;
-}
-
-// 一些循环
-@for $i from 12 through 30 {
-    .f#{$i} {
-        font-size: 1px * $i !important;
-    }
-}
+/*
+ * @Author: hzq
+ * @Date: 2019-06-27 16:49:01
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-26 17:34:00
+ * @文件说明: scss全局引入入口
+ */
+@import 'color';
+// @import 'editor';
+@import 'flex';
+@import 'fontsize';
+@import 'other';
+@import 'radius';
+@import 'space';
