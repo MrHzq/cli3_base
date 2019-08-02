@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import autoRouter from 'vue-router-auto'
+import VueRouterAuto from 'vue-router-auto'
 
 if (!window.VueRouter) Vue.use(Router)
 
-const routes = autoRouter({
+const routes = VueRouterAuto({
     redirect: '/home',
     rc: require.context('@/views', true, /\.vue$/)
 })

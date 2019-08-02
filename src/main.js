@@ -2,11 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import hzqAxios from 'hzq-axios'
-import hzqTool from 'hzq-tool'
+import AxiosPlugin from 'axios-plugin'
+import VueToolPlugin from 'vue-tool-plugin'
 import './components/global'
 
-Vue.use(hzqTool, { router })
+Vue.use(VueToolPlugin, { router })
 
 Vue.config.productionTip = false
 
@@ -17,7 +17,7 @@ console.log('当前NODE_ENV：' + process.env.NODE_ENV)
 console.log('当前VUE_APP_CURRENTMODE：' + process.env.VUE_APP_CURRENTMODE)
 console.log('是否为测试环境：' + Vue.prototype.$istest)
 
-Vue.use(hzqAxios, require.context('@/apiurl', true, /\.js$/), {
+Vue.use(AxiosPlugin, require.context('@/apiurl', true, /\.js$/), {
     baseURL: '/api',
     // 请求拦截之前
     beforeRequest(config) {
